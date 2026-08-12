@@ -1,5 +1,6 @@
 package org.warehouse.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,7 +18,8 @@ public class OrderItem {
     private Product product;
 
     @ManyToOne
-
+    @JoinColumn(name = "order_id")
+    @JsonIgnore
     private Order order;
 
     public OrderItem() {}
