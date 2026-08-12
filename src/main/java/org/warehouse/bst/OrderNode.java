@@ -11,4 +11,4 @@ class OrderNode {
     OrderNode(Order data) {
         this.data = data;
     }
-}
+};
